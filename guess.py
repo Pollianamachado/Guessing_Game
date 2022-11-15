@@ -1,13 +1,6 @@
 import random
 name = input("Welcome to the Guessing Game! What's your name: ")
 
-def game_over():
-    again= input("Do you want to try again?\n(yes/no)? ")
-    if again == "yes".lower:
-        start_game()
-    else: 
-        print(f"Bye {name}, thanks for playing it")
-        
          
 def start_game():
     guess= print(f"Hello, {name}. You have 4 chances to guess it. Let's go!")
@@ -27,16 +20,16 @@ def start_game():
             continue
         if attempt_limit == 0 and guess != x:
             print("Game over")
-            game_over()         
+            break         
         if guess > x: 
             print("its lower")            
             continue
         if guess < x:
             print("it's higher")
             continue   
-    else:
-        print(f"congratulations, {name}. You guessed it after {attempt} attempt(s)")   
-        game_over()
+        else:
+            print(f"congratulations, {name}. You guessed it after {attempt} attempt(s)")   
+            break
         
             
 start_game()
