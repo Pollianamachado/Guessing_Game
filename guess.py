@@ -1,4 +1,3 @@
-#guessing game
 import random
 name = input("Welcome to the Guessing Game! What's your name: ")
 
