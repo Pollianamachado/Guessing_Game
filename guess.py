@@ -1,4 +1,3 @@
-import sys
 import random
 name = input("Welcome to the Guessing Game! What's your name: ")
 
@@ -10,7 +9,7 @@ def game_over():
         if again == "yes": 
             start_game()
         if again == "no": 
-            sys.exit(f"Bye, {name}. Thanks for playing it!")
+            break
         if again != "no" or "yes":
             print("Sorry, you have to write 'yes' or 'no'")
             continue 
