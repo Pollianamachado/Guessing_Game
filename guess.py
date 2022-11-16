@@ -1,3 +1,4 @@
+import sys
 import random
 name = input("Welcome to the Guessing Game! What's your name: ")
 
@@ -8,11 +9,9 @@ def game_over():
     while again == "yes":
         try:
             start_game()
-        except again == int():
-            print("you have to write 'yes' or 'no'")
+        except TypeError:
             continue
-        else: 
-            break
+    sys.exit(f"Bye, {name}. Thanks for playing it!") 
 
 def start_game():
     guess= print(f"Hello, {name}. You have 4 chances to guess it. Let's go!")
