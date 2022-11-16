@@ -3,15 +3,17 @@ import random
 name = input("Welcome to the Guessing Game! What's your name: ")
 
 def game_over():
-    again= input("Do you want to play again? ")
     attempt= 0
     attempt_limit = 4
-    while again == "yes":
-        try:
+    while True:
+        again= input("Do you want to play again? ")
+        if again == "yes": 
             start_game()
-        except TypeError:
-            continue
-    sys.exit(f"Bye, {name}. Thanks for playing it!") 
+        if again == "no": 
+            sys.exit(f"Bye, {name}. Thanks for playing it!")
+        if again != "no" or "yes":
+            print("Sorry, you have to write 'yes' or 'no'")
+            continue 
 
 def start_game():
     guess= print(f"Hello, {name}. You have 4 chances to guess it. Let's go!")
@@ -46,7 +48,7 @@ def start_game():
         
             
 start_game()
-game_over()
+
 
 
 
